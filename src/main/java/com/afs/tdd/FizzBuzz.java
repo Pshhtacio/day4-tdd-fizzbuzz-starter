@@ -3,9 +3,7 @@ package com.afs.tdd;
 public class FizzBuzz {
     public String countOff(int number) {
         StringBuilder message = new StringBuilder();
-        if (!isMultipleOf3(number) && !isMultipleOf5(number) && !isMultipleOf7(number)) {
-            return Integer.toString(number);
-        }
+
         if (isMultipleOf3(number)) {
             message.append("Fizz");
         }
@@ -16,7 +14,7 @@ public class FizzBuzz {
             message.append("Whizz");
         }
 
-        return message.toString();
+        return message.length() > 0 ? message.toString() : Integer.toString(number);
     }
 
     public boolean isMultipleOf3(int number) {
@@ -26,6 +24,7 @@ public class FizzBuzz {
     public boolean isMultipleOf5(int number) {
         return number % 5 == 0;
     }
+
     public boolean isMultipleOf7(int number) {
         return number % 7 == 0;
     }
