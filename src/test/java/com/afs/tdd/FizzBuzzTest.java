@@ -37,8 +37,8 @@ public class FizzBuzzTest {
     }
     @Test
     void should_return_Whizz_when_countOff_given_a_number_multiple_of_7(){
-        int numberMultipleOf15 = 7;
-        String result = fizzBuzz.countOff(numberMultipleOf15);
+        int numberMultipleOf7 = 7;
+        String result = fizzBuzz.countOff(numberMultipleOf7);
         assertEquals("Whizz", result);
     }
 }
