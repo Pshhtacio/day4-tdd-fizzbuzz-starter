@@ -56,4 +56,10 @@ public class FizzBuzzTest {
         String result = fizzBuzz.countOff(numberMultipleOf5And7);
         assertEquals("BuzzWhizz", result);
     }
+    @Test
+    void should_return_FizzBuzzWhizz_when_countOff_given_a_number_multiple_of_3_and_5_and_7() {
+        int numberMultipleOf3And5And7 = 105;
+        String result = fizzBuzz.countOff(numberMultipleOf3And5And7);
+        assertEquals("FizzBuzzWhizz", result);
+    }
 }
