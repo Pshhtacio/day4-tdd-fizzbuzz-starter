@@ -14,4 +14,8 @@ public class FizzBuzzTest {
         //Then
         Assertions.assertEquals("1", result);
     }
+
+    void should_return_Fizz_when_countOff_given_a_number_multiple_of_3(){}
+    void should_return_Buzz_when_countOff_given_a_number_multiple_of_5(){}
+    void should_return_FizzBuzz_when_countOff_given_a_number_multiple_of_15(){}
 }
