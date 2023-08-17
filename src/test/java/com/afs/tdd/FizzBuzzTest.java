@@ -23,6 +23,11 @@ public class FizzBuzzTest {
         String result = fizzBuzz.countOff(numberMultipleOf3);
         assertEquals("Fizz", result);
     }
-    void should_return_Buzz_when_countOff_given_a_number_multiple_of_5(){}
+    @Test
+    void should_return_Buzz_when_countOff_given_a_number_multiple_of_5(){
+        int numberMultipleOf5 = 5;
+        String result = fizzBuzz.countOff(numberMultipleOf5);
+        assertEquals("Buzz", result);
+    }
     void should_return_FizzBuzz_when_countOff_given_a_number_multiple_of_15(){}
 }
