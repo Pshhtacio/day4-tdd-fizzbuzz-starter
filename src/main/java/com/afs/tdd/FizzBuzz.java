@@ -6,6 +6,6 @@ public class FizzBuzz {
     }
 
     public String countOff(int normalNumber) {
-        return Integer.toString(normalNumber);
+        return normalNumber%3 == 0 ? "Fizz" : Integer.toString(normalNumber);
     }
 }
