@@ -1,20 +1,17 @@
 package com.afs.tdd;
 
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class FizzBuzz {
     public String countOff(int number) {
-        StringBuilder message = new StringBuilder();
+        String message = Stream.of(
+                        isMultipleOf3(number) ? "Fizz" : "",
+                        isMultipleOf5(number) ? "Buzz" : "",
+                        isMultipleOf7(number) ? "Whizz" : "")
+                .collect(Collectors.joining());
 
-        if (isMultipleOf3(number)) {
-            message.append("Fizz");
-        }
-        if (isMultipleOf5(number)) {
-            message.append("Buzz");
-        }
-        if (isMultipleOf7(number)) {
-            message.append("Whizz");
-        }
-
-        return message.length() > 0 ? message.toString() : Integer.toString(number);
+        return !message.isEmpty() ? message : Integer.toString(number);
     }
 
     public boolean isMultipleOf3(int number) {
