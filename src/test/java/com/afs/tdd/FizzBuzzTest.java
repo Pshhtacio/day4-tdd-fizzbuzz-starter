@@ -30,9 +30,15 @@ public class FizzBuzzTest {
         assertEquals("Buzz", result);
     }
     @Test
-    void should_return_FizzBuzz_when_countOff_given_a_number_multiple_of_15(){
+    void should_return_FizzBuzz_when_countOff_given_a_number_multiple_of_3_and_5(){
         int numberMultipleOf15 = 15;
         String result = fizzBuzz.countOff(numberMultipleOf15);
         assertEquals("FizzBuzz", result);
+    }
+    @Test
+    void should_return_Whizz_when_countOff_given_a_number_multiple_of_7(){
+        int numberMultipleOf15 = 15;
+        String result = fizzBuzz.countOff(numberMultipleOf15);
+        assertEquals("Whizz", result);
     }
 }
