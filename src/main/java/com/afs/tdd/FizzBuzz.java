@@ -6,12 +6,17 @@ public class FizzBuzz {
     }
 
     public String countOff(int number) {
-        if(isMultipleOf3(number)){
-            return "Fizz";
-        } else if (isMultipleOf5(number)) {
-            return "Buzz";
+        StringBuilder message = new StringBuilder();
+        if (!isMultipleOf3(number) && !isMultipleOf5(number)) {
+            message.append(Integer.toString(number));
         }
-        return Integer.toString(number);
+        if(isMultipleOf3(number)){
+            message.append("Fizz");
+        }
+        if (isMultipleOf5(number)){
+            message.append("Buzz");
+        }
+        return message.toString();
     }
 
     public boolean isMultipleOf3(int number){
